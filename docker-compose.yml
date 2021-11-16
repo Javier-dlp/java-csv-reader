@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+##  To deploy the app in docker:
+#  app:
+#    image: 'java-csv-reader:latest'
+#    build:
+#      context: .
+#    container_name: app
+#    ports:
+#      - 8080:8080
+#    depends_on:
+#      - postgres_db
+##    To replace in application.yml
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres_db:5432/postgres
+#      - SPRING_DATASOURCE_USERNAME=username
+#      - SPRING_DATASOURCE_PASSWORD=nE5kMc7JCGNqwDQM
+#      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+  postgres_db:
+    image: "postgres:latest"
+    container_name: db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: nE5kMc7JCGNqwDQM
+      POSTGRES_DB: postgres

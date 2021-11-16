@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: username
+    password: nE5kMc7JCGNqwDQM
+    url: jdbc:postgresql://localhost:5432/postgres
+  flyway:
+    schemas: csv_reader
+    user: username
+    password: nE5kMc7JCGNqwDQM
+    url: jdbc:postgresql://localhost:5432/postgres
+  jpa:
+    properties:
+      hibernate:
+        default_schema: csv_reader
+        format_sql: true
